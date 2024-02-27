@@ -19,7 +19,7 @@ do
 
 Console.WriteLine();
 
-if ( firstName.ToLower() == "bob" || firstName.ToLower() == "sue" )
+if ( firstName?.ToLower() == "bob" || firstName?.ToLower() == "sue" )
 {
 	Console.WriteLine("Welcome Professor!");
 }
