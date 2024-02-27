@@ -1,0 +1,48 @@
+Requirements:
+Plan and build a Console application that asks a user for their name and their age. If their name is Bob or Sue, address them as Professor. If the person is under 21, recommend they wait X years to start this class.
+
+
+W: Walk through the project
+
+Console app starts, asks user for their name, gets the name.  Console asks for age, gets the age.
+If the name is Bob or Sue, address them as professor.
+If the person is under 21, recommend they wait 21 less their age to start the class.
+
+
+O: Open up the requirements
+
+Are we asking for first name, last name or both? => Just first name
+How do we address people other than Bob or Sue? => Address them by name
+Do we check for Bob or Sue's age, or just people other than Bob or Sue
+
+
+U: User interface design
+
+Prompt: "What is your first name: "
+Prompt: "What is your age: "
+Error prompt: "That is not a valid age."
+Output for Bob or Sue: "Welcome Professor!"
+Output for other person 21 or over: "Welcome {first name}!"
+Output for other person under 21: "You should wait {21-age} years to start this class."
+
+
+L: Logic design
+
+Prompt for first name
+Read in first name
+Prompt for age
+Read in text of age
+Attempt to convert age in text to age in numeric
+If not successful, output error prompt and go back to reading in text of age; repeat until conversion is successful
+Compare first name in lowercase with "bob" or "sue", if true, output "Welcome Professor!"
+If false, compare age with 21, if age < 21 output recommend they wait 21 - age to start class
+If age >= 21, output "Welcome {first name}".
+
+
+D: Data design
+
+
+string firstName
+string ageText
+bool isValidAge
+int age
